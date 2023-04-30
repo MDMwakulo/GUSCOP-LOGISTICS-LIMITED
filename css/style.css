@@ -11,10 +11,17 @@
   align-items: center;
   background-color: #f7f7f7;
 
+  /* we give the header height because when its sticks it tends
+   to collapse which we don't want */
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 
   z-index: 2;
+}
+
+.header a {
+  display: flex;
 }
 
 .logo {
@@ -95,6 +102,24 @@
   line-height: 1;
 }
 
+/* For MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.4rem;
+  width: 4.4rem;
+}
+
+.icon-mobile-nav[name='close-outline'] {
+  display: none;
+}
+
 /************************/
 /* Main */
 /************************/
@@ -116,7 +141,6 @@ main {
     ),
     url(../images/hero-1.jpg);
   background-size: cover;
-  /* background-position: center; */
 
   display: grid;
   grid-template-rows: 9.6rem 1fr;
@@ -490,8 +514,6 @@ main {
 }
 
 .product-title {
-  /* width: 40%;
-  margin: 0 auto; */
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
@@ -566,7 +588,7 @@ main {
   grid-template-rows: repeat(3, 1fr);
 }
 
-.logistics-image-1 {
+.logistics-image {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
 
@@ -715,7 +737,8 @@ main {
 }
 
 .memberships img {
-  height: 11rem;
+  max-height: 11rem;
+  max-width: 100%;
   filter: grayscale(1);
   opacity: 85%;
 }

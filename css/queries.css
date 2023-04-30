@@ -1,0 +1,609 @@
+/* ren and em do not depend of html font-size when dealing with media queries. 
+Instead 1rem = 1em = 16px */
+
+/**************************************/
+/* BELOW  1264px (Smaller Desktops)*/
+/**************************************/
+
+@media (max-width: 79em) {
+  .container {
+    padding: 0 2.4rem;
+  }
+
+  .section-hero {
+    grid-template-columns: 2.4rem 1fr 2.4rem;
+  }
+
+  .section-about {
+    grid-template-columns: 2.4rem 1fr 2.4rem;
+  }
+
+  .mission-vision-statements {
+    grid-template-columns: 2.4rem 1fr 2.4rem;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr 0.5fr 1fr;
+  }
+}
+
+/**************************************/
+/* BELOW  1264px (Landscape Tablets)*/
+/**************************************/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%; /* 9px / 16px * 100% = 56.25 */
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-weight: 600;
+  }
+
+  .about-image-1 {
+    grid-column: 1 / -1;
+  }
+
+  .about-image-2 {
+    grid-row: 9 / -1;
+  }
+
+  .memberships img {
+    max-height: 9rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1.3fr 1fr;
+    column-gap: 2.4rem;
+  }
+}
+
+/**************************************/
+/* BELOW  960px (Tablets)*/
+/**************************************/
+
+@media (max-width: 60em) {
+  html {
+    font-size: 50%; /* 8px / 16px * 100% = 50%*/
+  }
+
+  .container {
+    max-width: 80rem;
+  }
+
+  .item-box,
+  .product-box {
+    flex: 0 0 45%;
+    margin-bottom: 0;
+  }
+
+  .section-hero {
+    grid-template-columns: 4.8rem 1fr 4.8rem;
+  }
+
+  .hero-container {
+    grid-template-columns: 65fr 35fr;
+  }
+
+  .trait-box-content {
+    margin-bottom: -4.4rem;
+  }
+
+  .section-service-traits {
+    padding: 9.4rem 0;
+    margin-bottom: 0;
+  }
+
+  .section-products {
+    padding: 12rem 0;
+  }
+
+  /************************/
+  /* ABOUT SECTION */
+  /************************/
+
+  .section-about {
+    grid-template-columns: 1fr;
+
+    margin: 0 auto;
+    max-width: 75rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  .about-container {
+    grid-column: 1 / -1;
+  }
+
+  .about-image-box {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  .about-image-box {
+    grid-template-rows: repeat(11, 5vw);
+  }
+
+  .about-image-1 {
+    grid-column: 2 / span 8;
+    grid-row: 1 / span 8;
+  }
+
+  .about-image-2 {
+    grid-column: 3 / span 6;
+    grid-row: 7 / -1;
+    transform: scaleX(1);
+  }
+
+  .about-content-box {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+
+    margin-top: 0;
+    margin-left: 0;
+    padding: 6.4rem 0 0 0;
+  }
+
+  .content-block-trait-icon,
+  .content-block-trait-icon-fill {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .mission-vision-statements {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-vision-container {
+    grid-template-columns: 1fr;
+  }
+
+  .content-block-traits {
+    gap: 4.8rem;
+  }
+
+  /************************/
+  /* PRODUCTS SECTION */
+  /************************/
+
+  .section-products {
+    margin-bottom: 12rem;
+  }
+
+  /************************/
+  /* GALLERY SECTION */
+  /************************/
+
+  .gallery-container {
+    column-count: 3;
+  }
+
+  /************************/
+  /* LOGISTICS SECTION */
+  /************************/
+
+  .logistics-grid {
+    gap: 8rem;
+  }
+
+  .logistics-image-box {
+    grid-column: 1 / -1;
+    grid-template-rows: 40vw;
+  }
+
+  .logistics-content-box {
+    grid-column: 1 / -1;
+  }
+
+  .logistics-content-box p:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+  /************************/
+  /* CALL-TO-ACTION SECTION */
+  /************************/
+
+  .cta-grid {
+    grid-template-columns: 1fr;
+    padding: 0 2.4rem;
+  }
+
+  .cta-content-box {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-image-box {
+    justify-content: center;
+  }
+
+  .cta-image-box::before {
+    width: 55%;
+    padding-bottom: 55%;
+  }
+
+  .cta-image-box::after {
+    max-width: 15%;
+    padding-bottom: 15%;
+    transform: translate(-130%, -140%);
+  }
+
+  .cta-image {
+    max-width: 55%;
+  }
+
+  /************************/
+  /* MEMBERSHIPS SECTION */
+  /************************/
+  .memberships img {
+    max-height: 7rem;
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.2rem;
+    transition: all 0.5s ease;
+
+    /* Hide Navigation */
+    /* Prevents transitions */
+    /* display: none; */
+
+    /* 1) Hide the element visually */
+    opacity: 0;
+
+    /* 2) Make it unacessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name='close-outline'] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name='menu-outline'] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 2.4rem;
+    text-align: center;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+
+  .phone-icon {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .main-nav-link-phone-text {
+    font-size: 1.6rem;
+  }
+
+  .main-nav-link-phone-number {
+    font-size: 2.4rem;
+  }
+
+  /************************/
+  /* Footer */
+  /************************/
+  .footer-grid {
+    grid-template-columns: 55fr 45fr;
+    row-gap: 4.8rem;
+    column-gap: 3.2rem;
+  }
+
+  .license-col,
+  .address-col {
+    grid-row: 1 / 2;
+  }
+
+  .footer-widget-title {
+    margin-bottom: 3.2rem;
+  }
+
+  .footer-description {
+    margin-bottom: 2.4rem;
+  }
+}
+
+/**************************************/
+/* BELOW  656px (Smaller Tablets)*/
+/**************************************/
+
+@media (max-width: 41em) {
+  /************************/
+  /* HERO SECTION */
+  /************************/
+  .section-hero {
+    background-position: center;
+  }
+
+  .hero-container {
+    grid-template-columns: 80fr 20fr;
+  }
+
+  /************************/
+  /* LOGISTICS SECTION */
+  /************************/
+  .logistics-image-box {
+    grid-template-rows: 50vw;
+  }
+
+  /************************/
+  /* QUALITY TRAITS SECTION */
+  /************************/
+  .item-box,
+  .product-box {
+    flex: 0 0 70%;
+  }
+
+  /************************/
+  /* PRODUCT SECTION */
+  /************************/
+  .product-img {
+    height: 26rem;
+  }
+
+  /************************/
+  /* Footer */
+  /************************/
+  .license-box {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-description {
+    grid-row: 1 / 2;
+  }
+
+  .footer-license {
+    max-width: 50%;
+  }
+}
+
+/************************/
+/* BELOW  521px (Phones)*/
+/************************/
+@media (max-width: 32em) {
+  .heading-primary {
+    font-size: 6.2rem;
+  }
+
+  .heading-secondary {
+    font-size: 3rem;
+  }
+  /************************/
+  /* HERO SECTION */
+  /************************/
+  .logo {
+    max-height: 6.2rem;
+  }
+
+  .icon-mobile-nav {
+    max-height: 3.2rem;
+    max-width: 3.2rem;
+  }
+
+  .margin-right {
+    margin-bottom: 1.6rem !important;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  /************************/
+  /* QUALITY TRAITS SECTION */
+  /************************/
+  .item-box,
+  .product-box {
+    flex: 0 0 85%;
+  }
+
+  /************************/
+  /* ABOUT SECTION */
+  /************************/
+  .content-block-traits {
+    gap: 2.4rem;
+    flex-wrap: wrap;
+  }
+
+  .about-image-box {
+    grid-template-rows: repeat(11, 10vw);
+  }
+
+  .content-block-trait {
+    max-width: 75%;
+  }
+
+  .about-image-box {
+    grid-template-rows: repeat(11, 8vw);
+  }
+
+  .about-image-1 {
+    grid-column: 1 / -1;
+  }
+
+  .about-image-2 {
+    grid-column: 2 / span 7;
+  }
+  /************************/
+  /* GALLERY SECTION */
+  /************************/
+  .section-gallery {
+    padding-bottom: 4.8rem;
+  }
+
+  .gallery-container {
+    column-count: 2;
+  }
+
+  /************************/
+  /* LOGISTICS SECTION */
+  /************************/
+  .logistics-image-box {
+    grid-template-rows: 70vw;
+  }
+
+  /************************/
+  /* MEMBERSHIPS SECTION */
+  /************************/
+  .memberships img {
+    max-height: 5rem;
+  }
+
+  /************************/
+  /* Footer */
+  /************************/
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo-col,
+  .address-col,
+  .license-col {
+    grid-column: span 2;
+  }
+  .address-col {
+    grid-row: 2 / 3;
+  }
+
+  .footer-widget-contact:not(:last-child) {
+    max-width: 50%;
+  }
+}
+
+/************************/
+/* BELOW  403px (Smaller Phones)*/
+/************************/
+@media (max-width: 25.2em) {
+  /************************/
+  /* General Styling */
+  /************************/
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 2rem;
+  }
+
+  /************************/
+  /* HEADER */
+  /************************/
+  .header {
+    padding: 0 2.4rem;
+  }
+
+  /************************/
+  /* HERO SECTION */
+  /************************/
+  .section-hero {
+    grid-template-columns: 2.4rem 1fr 2.4rem;
+  }
+}
+
+/************************/
+/* BELOW  360px (Smaller Phones)*/
+/************************/
+@media (max-width: 22.5em) {
+  /************************/
+  /* General Styling */
+  /************************/
+  html {
+    font-size: 46.875%; /*7.5px / 16px * 100% = 46.875%*/
+  }
+
+  .heading-primary {
+    font-size: 5.2rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.4rem;
+  }
+
+  /************************/
+  /* PRODUCT SECTION */
+  /************************/
+  .item-box,
+  .product-box {
+    flex: 0 0 95%;
+  }
+
+  /************************/
+  /* GALLERY SECTION */
+  /************************/
+  .gallery-container {
+    column-gap: 1.2rem;
+  }
+
+  .gallery-item {
+    margin-bottom: 1.2rem;
+  }
+  /************************/
+  /* Footer */
+  /************************/
+  .footer-widget-contact:not(:last-child) {
+    max-width: 70%;
+  }
+}
+
+/************************/
+/* BELOW  280px (Mini Phones)*/
+/************************/
+@media (max-width: 17.5em) {
+  /************************/
+  /* General Styling */
+  /************************/
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 1.4rem;
+  }
+
+  /************************/
+  /* ABOUT SECTION */
+  /************************/
+  .mission-vision {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+  .mission-vision-icon-container {
+    transform: translateY(0);
+  }
+}
+
+/*
+- Font Size in px
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 96 
+
+-Spacing system in px
+2 / 4 / 6 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
