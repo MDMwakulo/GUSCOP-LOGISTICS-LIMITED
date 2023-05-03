@@ -72,10 +72,34 @@ Instead 1rem = 1em = 16px */
     max-width: 80rem;
   }
 
+  .main-nav-list {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+
+  .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 3.6rem;
+  }
+
+  .main-nav-list li:not(:last-child) {
+    margin-bottom: 3.6rem;
+  }
+
   .item-box,
   .product-box {
     flex: 0 0 45%;
     margin-bottom: 0;
+  }
+
+  .item-box:not(:last-child),
+  .product-box:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  .item-box:nth-child(2),
+  .product-box:nth-child(2) {
+    margin-right: 0;
   }
 
   .section-hero {
@@ -159,8 +183,8 @@ Instead 1rem = 1em = 16px */
     grid-template-columns: 1fr;
   }
 
-  .content-block-traits {
-    gap: 4.8rem;
+  .content-block-trait:not(:last-child) {
+    margin-right: 4.8rem;
   }
 
   /************************/
@@ -241,6 +265,7 @@ Instead 1rem = 1em = 16px */
   /* MOBILE NAVIGATION */
   .btn-mobile-nav {
     display: block;
+    z-index: 9;
   }
 
   .main-nav {
@@ -372,6 +397,11 @@ Instead 1rem = 1em = 16px */
     height: 26rem;
   }
 
+  .item-box:nth-child(1),
+  .product-box:nth-child(1) {
+    margin-right: 0;
+  }
+
   /************************/
   /* Footer */
   /************************/
@@ -431,8 +461,12 @@ Instead 1rem = 1em = 16px */
   /* ABOUT SECTION */
   /************************/
   .content-block-traits {
-    gap: 2.4rem;
     flex-wrap: wrap;
+  }
+
+  .content-block-trait:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 2.4rem;
   }
 
   .about-image-box {

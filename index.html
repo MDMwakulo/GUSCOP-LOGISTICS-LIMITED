@@ -4,8 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guscop is an Exporter of 
+  Fresh Farm Produce in Kenya. Deals with freshest and highest 
+  quality fruits, herbs and vegetables such as ovacados, basil extract,
+  coriander &#8725; dhania, oregano, parsley, rosemary, thyme, beans, snap peas, snow &#8725; mangetout">
 
-  <link rel="icon" href="images/logo/logo-1-white.jpeg">
+  <link rel="icon" href="images/favicon.jpeg">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.jpeg" />
+  <link rel="manifest" href="manifest.webmanifest" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,17 +30,20 @@
     src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
   ></script>
 
-  <title>Guscop | Fresh Produce Exporter in Kenya</title>
+  <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+  <script defer src="app.js"></script>
+
+  <title>Guscop &mdash; Fresh Farm Exporter in Kenya</title>
 </head>
 <body>
-  <header class="header">
+  <header class="header sticky">
     <a href="#">
-      <img class="logo" src="images/logo.jpeg" alt="Guscop logo">
+      <img class="logo" src="images/logo-small-black.png" alt="Guscop logo">
     </a>
     <nav class="main-nav">
       <ul class="main-nav-list">
-        <li><a class="main-nav-link" href="#home">Home</a></li>
-        <li><a class="main-nav-link" href="#meals">About</a></li>
+        <li><a class="main-nav-link" href="#">Home</a></li>
+        <li><a class="main-nav-link" href="#about">About</a></li>
         <li><a class="main-nav-link" href="#products">Products</a></li>
         <li><a class="main-nav-link" href="#gallery">Gallery</a></li>
       </ul>
@@ -67,28 +76,34 @@
             and highest quality fruits, herbs, and vegetables from our farms.
           </p>
           <a href="#cta" class="btn btn--full margin-right">Get Best Deals</a>
-          <a href="#how" class="btn btn--outline">Learn More &darr;</a>
+          <a href="#traits" class="btn btn--outline">Learn More &darr;</a>
         </div>
       </div>
     </section>
 
-    <section class="section-service-traits">
+    <section class="section-service-traits" id="traits">
       <div class="container">
         <div class="items">
           <div class="item-box">
+          <div class="trait-img-box">
             <img src="images/trait-1.jpg" alt="Cargo plane">
+          </div>
             <div class="trait-box-content">
               <h3 class="heading-tertiary">Farm &#8725; Export Leader</h3>
             </div>
           </div>
           <div class="item-box">
-            <img src="images/trait-5.jpg" alt="Sunflower representing quality standards">
+          <div class="trait-img-box">
+            <img src="images/trait-2.jpg" alt="Basil">
+          </div>
             <div class="trait-box-content">
               <h3 class="heading-tertiary">Quality Standards</h3>
             </div>
           </div>
           <div class="item-box">
+          <div class="trait-img-box">
             <img src="images/trait-3.jpg" alt="Organic produce">
+          </div>
             <div class="trait-box-content">
               <h3 class="heading-tertiary">Organic Produce</h3>
             </div>
@@ -97,11 +112,11 @@
       </div>
     </section>
 
-    <section class="section-about">
+    <section class="section-about" id="about">
       <div class="about-container">
         <div class="about-image-box">
-          <div class="image-properties about-image-1"></div>
-          <div class="image-properties about-image-2"></div>
+          <div class="image-properties about-image-1" role="img" aria-label="Fields of farm produce"></div>
+          <div class="image-properties about-image-2" role="img" aria-label="Portion of farm land viewed in the evening"></div>
         </div>
         <div class="about-content-box">
           <div class="content-block">
@@ -177,7 +192,7 @@
       </div>
     </section>
 
-    <section class="section-products">
+    <section class="section-products" id="products">
       <div class="container">
         <div class="content-block items-center">
           <div class="content-block-logo content-block-logo-center"></div>
@@ -187,7 +202,7 @@
 
         <div class="items">
           <div class="product-box">
-            <div class="product-img product-img-1"></div>
+            <div class="product-img product-img-1" role="img" aria-label="Aromatic herbs and spices"></div>
             <div class="product-box-content">
               <div class="product-icon-container">
                 <div class="product-icon-box">
@@ -206,7 +221,7 @@
             </div>
           </div>
           <div class="product-box">
-            <div class="product-img product-img-2"></div>
+            <div class="product-img product-img-2" role="img" aria-label="Fresh Vegetables"></div>
             <div class="product-box-content">
               <div class="product-icon-container">
                 <div class="product-icon-box">
@@ -222,7 +237,7 @@
             </div>
           </div>
           <div class="product-box">
-            <div class="product-img product-img-3"></div>
+            <div class="product-img product-img-3" role="img" aria-label="Sweet tropical fruits"></div>
             <div class="product-box-content">
               <div class="product-icon-container">
                 <div class="product-icon-box">
@@ -239,7 +254,7 @@
       </div>
     </section>
     
-    <section class="section-gallery">
+    <section class="section-gallery" id="gallery">
       <div class="container">
         <div class="content-block items-center">
           <div class="content-block-logo content-block-logo-center"></div>
@@ -255,22 +270,22 @@
           <img src="images/gallery/gallery-2.jpeg" alt="Gallery image 2" class="gallery-img">
         </figure>
         <figure class="gallery-item">
-          <img src="images/gallery/gallery-3.jpeg" alt="Gallery image 3" class="gallery-img">
+          <img src="images/gallery/gallery-3.jpg" alt="Gallery image 3" class="gallery-img">
         </figure>
         <figure class="gallery-item">
-          <img src="images/gallery/gallery-4.jpeg" alt="Gallery image 4" class="gallery-img">
+          <img src="images/gallery/gallery-4.jpg" alt="Gallery image 4" class="gallery-img">
         </figure>
         <figure class="gallery-item">
           <img src="images/gallery/gallery-5.jpeg" alt="Gallery image 5" class="gallery-img">
         </figure>
         <figure class="gallery-item">
-          <img src="images/gallery/gallery-6.jpeg" alt="Gallery image 6" class="gallery-img">
+          <img src="images/gallery/gallery-6.jpg" alt="Gallery image 6" class="gallery-img">
         </figure>
         <figure class="gallery-item">
           <img src="images/gallery/gallery-7.jpeg" alt="Gallery image 7" class="gallery-img">
         </figure>
         <figure class="gallery-item">
-          <img src="images/gallery/gallery-8.jpeg" alt="Gallery image 8" class="gallery-img">
+          <img src="images/gallery/gallery-8.jpg" alt="Gallery image 8" class="gallery-img">
         </figure>
         <figure class="gallery-item">
           <img src="images/gallery/gallery-9.jpeg" alt="Gallery image 9" class="gallery-img">
@@ -282,7 +297,7 @@
           <img src="images/gallery/gallery-11.jpeg" alt="Gallery image 11" class="gallery-img">
         </figure>
         <figure class="gallery-item">
-          <img src="images/gallery/gallery-12.jpeg" alt="Gallery image 12" class="gallery-img">
+          <img src="images/gallery/gallery-12.jpg" alt="Gallery image 12" class="gallery-img">
         </figure>
         <figure class="gallery-item">
           <img src="images/gallery/gallery-13.jpeg" alt="Gallery image 13" class="gallery-img">
@@ -299,7 +314,7 @@
     <section class="section-logistics">
       <div class="container logistics-grid">
         <div class="logistics-image-box">
-          <div class="image-properties logistics-image"></div>
+          <div class="image-properties logistics-image" role="img" aria-label="Truck transporting farm produce"></div>
         </div>
         <div class="logistics-content-box">
           <h2 class="heading-secondary heading-secondary-logistics">Providing Quality Logistics</h2>
@@ -329,10 +344,10 @@
       </div>
     </section>
 
-    <section class="section-cta">
+    <section class="section-cta" id="cta">
       <div class="container cta-grid">
         <div class="cta-image-box">
-          <img class="cta-image" src="images/call_to_action.jpg" alt="Farmer happy to serve a client">
+          <img class="cta-image" src="images/call_to_action.jpg" alt="Happy farmer ready to serve a client">
         </div>
         <div class="cta-content-box">
           <div class="cta-content">
@@ -361,10 +376,10 @@
         <h2 class="heading-memberships">Our Memberships</h2>
         <div class="memberships">
           <img src="images/membership_1.jpg" alt="Sedex Logo">
-          <img src="images/membership_2.jpg" alt="GLOBALG.A.P GRASP Logo">
+          <img src="images/membership_2.jpg" alt="GLOBAL G.A.P GRASP Logo">
           <img src="images/membership_3.jpg" alt="AFA Logo">
           <img src="images/membership_4.jpg" alt="KEMPHIS Logo">
-          <img src="images/membership_5.jpg" alt="GLOBALG.A.P Logo">
+          <img src="images/membership_5.jpg" alt="GLOBAL G.A.P Logo">
         </div>
       </div>
     </section>
@@ -374,7 +389,7 @@
     <div class="container footer-grid">
       <div class="logo-col">
         <a href="#" class="footer-logo-box">
-          <img class="footer-logo" src="images/logo.jpeg" alt="Guscop logo">
+          <img class="footer-logo" src="images/logo-small-transparent.png" alt="Guscop logo">
         </a>
         <p class="footer-description">We aim to provide our customers with all the necessary information and resources to engage with us effectively and confidently</p>
         <ul class="social-links">
@@ -393,7 +408,7 @@
         <h3 class="footer-widget-title">Licensed Farm Exporter</h3>
         <div class="license-box">
           <figure class="footer-license-image">
-            <img class="footer-license" src="images/license.jpg" alt="License for exportation">
+            <img class="footer-license" src="images/license.jpg" alt="Exportation license">
           </figure>
           <p class="footer-description">Guscop is a registered farm export business governed by the Horticultural Crops Directorate of Kenya; License No: LA11/1004910</p>
         </div>

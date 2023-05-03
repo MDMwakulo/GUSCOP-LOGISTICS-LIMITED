@@ -48,6 +48,9 @@ Spacing system in px
 html {
   font-size: 62.5%; /* (10/16)px * 100 = 62.5% */
   overflow-x: hidden;
+
+  /* Does not work on Safari Browser */
+  /* scroll-behavior: smooth; */
 }
 
 body {
