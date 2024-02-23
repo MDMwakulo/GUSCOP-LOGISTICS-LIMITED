@@ -320,12 +320,11 @@ main {
 }
 
 .content-block-logo {
-  background-image: url(../images/logo-block.jpeg);
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 50%;
+  background-image: url(../images/logo-block.png);
+  width: 3rem;
+  height: 3rem;
   background-size: cover;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.4rem;
 }
 
 .content-span-1 {
@@ -800,7 +799,7 @@ footer {
 .footer-logo {
   display: block;
   margin-bottom: 1.6rem;
-  height: 6.2rem;
+  height: 7.4rem;
 }
 
 .social-links {
